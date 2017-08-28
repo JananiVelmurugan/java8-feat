@@ -44,4 +44,10 @@ public class ex1 {
 		toReturn.removeIf(Predicate.isEqual(null));
 		return toReturn;
 	}
+
+	public static <A> List<A> cloneWithoutNulls(final List<A> list) {
+		List<A> toReturn = new ArrayList<>(list);
+		toReturn.removeIf(it -> it == null);
+		return toReturn;
+	}
 }
